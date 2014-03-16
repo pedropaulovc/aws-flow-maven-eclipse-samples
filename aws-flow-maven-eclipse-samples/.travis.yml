@@ -1,0 +1,6 @@
+language: java
+before_install:
+    - cd lib
+    - mvn install:install-file -Dfile=aws-java-sdk-flow-build-tools-1.7.3.jar -DpomFile=aws-java-sdk-flow-build-tools-1.7.3.pom
+    - cd ..
+    - mvn clean compile test-compile
