@@ -4,7 +4,7 @@
 
 	<groupId>com.amazonaws.services.simpleworkflow.flow</groupId>
 	<artifactId>examples</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.7.3</version>
 	<packaging>jar</packaging>
 
 	<name>aws-flow-maven-eclipse-samples</name>
@@ -111,7 +111,6 @@
 			<artifactId>aws-java-sdk</artifactId>
 			<version>1.3.22</version>
 		</dependency>
-		<!-- AWS Samples Dependencies End -->
 	</dependencies>
 
 
