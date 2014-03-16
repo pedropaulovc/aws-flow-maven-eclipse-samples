@@ -14,9 +14,8 @@
  */
 package com.amazonaws.services.simpleworkflow.flow.examples.common;
 
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.Properties;
 
 import org.apache.log4j.BasicConfigurator;
@@ -48,26 +47,22 @@ public class ConfigHelper {
 
 	private Properties awsCredentials;
 
-    private ConfigHelper(File propertiesFile) throws IOException {
-        loadProperties(propertiesFile);
+    private ConfigHelper(InputStream inputStream) throws IOException {
+        loadProperties(inputStream);
     }
 
-    private void loadProperties(File propertiesFile) throws IOException {
+    private void loadProperties(InputStream inputStream) throws IOException {
 
-        FileInputStream inputStream = new FileInputStream(propertiesFile);
         sampleConfig = new Properties();
         sampleConfig.load(inputStream);
-
-        // use default AWS credentials
-        awsCredentials = new Properties();
-        awsCredentials.load(new FileInputStream(new File(System.getProperty("user.home"), ".aws-credentials-master")));
-
+        awsCredentials = sampleConfig;
+        
         this.swfServiceUrl = sampleConfig.getProperty(ConfigKeys.SWF_SERVICE_URL_KEY);
-        this.swfAccessId = awsCredentials.getProperty("AWSAccessKeyId");
-        this.swfSecretKey = awsCredentials.getProperty("AWSSecretKey");
+        this.swfAccessId = awsCredentials.getProperty("AWS.Access.ID");
+        this.swfSecretKey = awsCredentials.getProperty("AWS.Secret.Key");
 
-        this.s3AccessId = awsCredentials.getProperty("AWSAccessKeyId");
-        this.s3SecretKey = awsCredentials.getProperty("AWSSecretKey");
+        this.s3AccessId = awsCredentials.getProperty("AWS.Access.ID");
+        this.s3SecretKey = awsCredentials.getProperty("AWS.Secret.Key");
 
         this.domain = sampleConfig.getProperty(ConfigKeys.DOMAIN_KEY);
         this.domainRetentionPeriodInDays = Long.parseLong(sampleConfig.getProperty(ConfigKeys.DOMAIN_RETENTION_PERIOD_KEY));
@@ -77,8 +72,8 @@ public class ConfigHelper {
 
         BasicConfigurator.configure();
         Logger.getRootLogger().setLevel(Level.INFO);
-
-        ConfigHelper configHelper = new ConfigHelper(new File(SampleConstants.ACCESS_PROPERTIES_FILENAME));
+        
+        ConfigHelper configHelper = new ConfigHelper(ConfigHelper.class.getResourceAsStream(SampleConstants.ACCESS_PROPERTIES_FILENAME));
 
         return configHelper;
     }
