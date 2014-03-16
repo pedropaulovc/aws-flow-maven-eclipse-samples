@@ -45,8 +45,6 @@ mvn clean process-classes
 Eclipse Setup
 ---------
 
-http://download.eclipse.org/tools/ajdt/43/update
-
 1. Open Up Eclipse
 2. Pick Help > Install New Software and enter the URL ```http://download.eclipse.org/tools/ajdt/43/update``` for Eclipse 4.3 (Kepler). Install at least:
     * AspectJ Development Tools (Required)
@@ -103,7 +101,7 @@ The steps for running the AWS Flow Framework samples are:
     1. Go to the [SWF Management Console](https://console.aws.amazon.com/swf/home).
     2. Follow the on-screen instructions to log in.
     3. Click Manage Domains and register a new domain with the name Samples.
-2. Open the access.properties in the `src/main/resources` folder.
+2. Open the `access.properties` file in the `src/main/resources` folder.
 3. Locate the following sections and fill in your Access Key ID and Secret Access Key. You can use the same values for SWF and S3:
 ```
 # Fill in your AWS Access Key ID and Secret Access Key for SWF # http://aws.amazon.com/security-credentials
