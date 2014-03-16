@@ -235,3 +235,12 @@ The workflow starter takes 3 command line arguments that must be specified:
 2. **TIME_ZONE**: specifies the time zone to use for time calculations. The above command specifies PST (Pacific Standard Time).
 3. **CONTINUE_AS_NEW_AFTER_SECONDS**: specifies the duration, in seconds, after which the current execution should be closed and continued as a new execution. The above command specifies 60 seconds.
 
+References
+----------
+Converting these Flow Framework samples to Maven and Eclipse was no easy task and was helped by other people that kindly shared their experiences using the Flow Framework:
+
+* [AWS Simple Workflow Service (SWF) – Part 2, Sample Use Case](http://www.newvem.com/aws-simple-workflow-service-swf-part-2-sample-use-case/) and [Newvem SWF Example](https://bitbucket.org/ingenieux/newvem-swf-sample), this project's `pom.xml` was based on the Newvem SWF Example.
+* [How to consume Amazon SWF](http://stackoverflow.com/questions/9392655/how-to-consume-amazon-swf)
+* [A dozen things to know about AWS Simple Workflow in Eclipse and Maven ](http://blog.cyclopsgroup.org/2012/12/a-dozen-things-to-know-about-aws-simple.html)
+* [Using the AWS flow framework in a Maven project](http://nithint.wordpress.com/2013/09/18/using-the-aws-flow-framework-in-a-maven-project/)
+
