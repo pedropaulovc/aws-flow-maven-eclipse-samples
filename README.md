@@ -208,7 +208,7 @@ mvn exec:java -Dexec.mainClass="com.amazonaws.services.simpleworkflow.flow.examp
 mvn exec:java -Dexec.mainClass="com.amazonaws.services.simpleworkflow.flow.examples.cron.WorkflowHost" 
 ```
 ```
-mvn exec:java -Dexec.mainClass="com.amazonaws.services.simpleworkflow.flow.examples.cron.CronWorkflowExecutionStarter" -Dmain-args="\"*/10 * * * * *\" PST 60"
+mvn exec:java -Dexec.mainClass="com.amazonaws.services.simpleworkflow.flow.examples.cron.CronWorkflowExecutionStarter" -Dexec.args="'*/10 * * * * *' PST 60"
 ```
  The workflow starter takes 3 command line arguments that must be specified:
 
@@ -225,7 +225,7 @@ mvn exec:java -Dexec.mainClass="com.amazonaws.services.simpleworkflow.flow.examp
 mvn exec:java -Dexec.mainClass="com.amazonaws.services.simpleworkflow.flow.examples.cronwithretry.WorkflowHost" 
 ```
 ```
-mvn exec:java -Dexec.mainClass="com.amazonaws.services.simpleworkflow.flow.examples.cronwithretry.CronWithRetryWorkflowExecutionStarter" -Dmain-args="\"*/10 * * * * *\" PST 60"
+mvn exec:java -Dexec.mainClass="com.amazonaws.services.simpleworkflow.flow.examples.cronwithretry.CronWithRetryWorkflowExecutionStarter" -Dexec.args="'*/10 * * * * *' PST 60"
 ```
 The workflow starter takes 3 command line arguments that must be specified:
 
