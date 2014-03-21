@@ -30,32 +30,18 @@ Setup
 Once you've unpacked the project into a directory, you need to:
 
 1. Install the AWS Flow Build Tools (review the instructions inside the `lib/README.md` directory)
-2. Edit the `access.properties` file inside `src/main/resources`, with your AWS credentials and configurations.
-
-
-Stub File Generation
---------------------
-The Flow Framework generates source code based on your source code via annotation processing. Create the stub files, by running maven:
-
-```
-mvn clean process-classes
-```
-
-
-Eclipse Setup
----------
-
-1. Open Up Eclipse
-2. Pick Help > Install New Software and enter the URL ```http://download.eclipse.org/tools/ajdt/43/update``` for Eclipse 4.3 (Kepler). Install at least:
+2. Open Up Eclipse
+3. Pick Help > Install New Software and enter the URL ```http://download.eclipse.org/tools/ajdt/43/update``` for Eclipse 4.3 (Kepler). Install at least:
     * AspectJ Development Tools (Required)
     * Equinox Weaving SDK
     * Eclipse Weaving Service Source Code
-3. `m2eclipse` should be already installed. Restart when complete.
-4. Install Maven Integration for AJDT, Help > Install New Software and entering this URL: ```http://dist.springsource.org/release/AJDT/configurator/```. Restart Eclipse.
-5. Use File > Import and point to the directory or repository where are the project files.
-6. Build with Maven with a goal `clean process-classes` in order to generate necessary stub classes. See "Updating Activity / Workflows" below.
+4. `m2eclipse` should be already installed. Restart when complete.
+5. Install Maven Integration for AJDT, Help > Install New Software and entering this URL: ```http://dist.springsource.org/release/AJDT/configurator/```. Restart Eclipse.
+6. Use File > Import and point to the directory or repository where are the project files.
+7. Build with Maven with a goal `clean process-classes` in order to generate necessary stub classes. See "Updating Activity / Workflows" below.
+8. Edit the `access.properties` file inside `src/main/resources`, with your AWS credentials and configurations.
 
-When importing, M2Eclipse will ask if its ok to download additional Project Configurations. Yes, let him do it and add the remaining plugins.
+When importing, M2Eclipse may ask if its ok to download additional Project Configurations. Yes, let him do it and add the remaining plugins.
 
 
 Updating Activity / Workflows
