@@ -4,13 +4,13 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.amazonaws</groupId>
 	<artifactId>aws-java-sdk-flow-build-tools</artifactId>
-	<version>1.7.3</version>
+	<version>1.10.71</version>
 	<packaging>jar</packaging>
-	
+
 	<properties>
-		<aws.sdk.version>1.7.3</aws.sdk.version>
-		<freemarker.version>2.3.18</freemarker.version>
-		<aspectjrt.version>1.6.12</aspectjrt.version>
+		<aws.sdk.version>1.10.71</aws.sdk.version>
+		<freemarker.version>2.3.21</freemarker.version>
+		<aspectjrt.version>1.8.1</aspectjrt.version>
 	</properties>
 
 	<dependencies>

@@ -4,7 +4,7 @@ How to Install the AWS Flow Framework
 Short Version:
 
 ```shell
-$ mvn install:install-file -Dfile=aws-java-sdk-flow-build-tools-1.7.3.jar -DpomFile=aws-java-sdk-flow-build-tools-1.7.3.pom
+$ mvn install:install-file -Dfile=aws-java-sdk-flow-build-tools-1.10.71.jar -DpomFile=aws-java-sdk-flow-build-tools-1.10.71.pom
 ```
 
 Long Version:

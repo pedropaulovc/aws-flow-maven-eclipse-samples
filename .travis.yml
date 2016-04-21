@@ -1,5 +1,12 @@
 language: java
+
+sudo: false
+
+jdk:
+  - oraclejdk8
+
 before_install:
-    - cd lib
-    - mvn install:install-file -Dfile=aws-java-sdk-flow-build-tools-1.7.3.jar -DpomFile=aws-java-sdk-flow-build-tools-1.7.3.pom
-    - cd ..
+  - mvn install:install-file -Dfile=lib/aws-java-sdk-flow-build-tools-1.10.71.jar -DpomFile=lib/aws-java-sdk-flow-build-tools-1.10.71.pom
+
+script:
+  - mvn test
